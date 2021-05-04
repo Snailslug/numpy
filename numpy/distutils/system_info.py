@@ -1908,8 +1908,6 @@ class accelerate_info(system_info):
                     'accelerate' in libraries):
                 if intel:
                     args.extend(['-msse3'])
-                else:
-                    args.extend(['-faltivec'])
                 args.extend([
                     '-I/System/Library/Frameworks/vecLib.framework/Headers'])
                 link_args.extend(['-Wl,-framework', '-Wl,Accelerate'])
@@ -1918,8 +1916,6 @@ class accelerate_info(system_info):
                       'veclib' in libraries):
                 if intel:
                     args.extend(['-msse3'])
-                else:
-                    args.extend(['-faltivec'])
                 args.extend([
                     '-I/System/Library/Frameworks/vecLib.framework/Headers'])
                 link_args.extend(['-Wl,-framework', '-Wl,vecLib'])
